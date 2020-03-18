@@ -1,23 +1,27 @@
 package com.company.animal;
 
+import com.company.Mate;
 import com.company.TomadorDeMate;
+
 
 public class Reptil extends Animal implements TomadorDeMate {
 
-  public Reptil(Integer energia) {
-    super(energia);
+  public Reptil(String nombre, Double energia) {
+    super(nombre, energia);
   }
 
   @Override
-  public void tomarMate() {
-    //todo
+  public void tomarMate(Mate unMate) {
+    this.recibirMate();
+    this.energia = this.energia * (Math.pow(2, unMate.getUnidades()));
+    this.devolverMate();
   }
 
   private void recibirMate(){
-    //todo
+    System.out.println(this.nombre + " recibe el mate. Su energía es de " + this.energia + ". Toma el mate.");
   }
 
   private void devolverMate(){
-    //todo
+    System.out.println(this.nombre + " devuelve el mate vacío. Ahora su energía es de " + this.energia);
   }
 }

@@ -15,11 +15,14 @@ public class RondaDeMate {
   }
 
   public void agregarIntegrante(TomadorDeMate integrante){
-    // TODO: 18/03/2020
+    this.integrantesDeRonda.add(integrante);
   }
 
   public void empezarRonda(){
-    // TODO: 18/03/2020
+    System.out.println("Arranca la ronda de mate");
+    for (TomadorDeMate tomadorDeMate : integrantesDeRonda) {
+      robotCebador.cebarMate(tomadorDeMate);
+    }
   }
 
 }

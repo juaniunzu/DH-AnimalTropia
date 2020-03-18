@@ -2,13 +2,15 @@ package com.company.animal;
 
 public class Animal {
 
-  private Integer energia;
+  protected String nombre;
+  protected Double energia;
 
-  public Animal(Integer energia) {
+  public Animal(String nombre, Double energia) {
+    this.nombre = nombre;
     this.energia = energia;
   }
 
-  public Integer getEnergia() {
+  public Double getEnergia() {
     return energia;
   }
 }

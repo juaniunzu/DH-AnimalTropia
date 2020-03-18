@@ -1,23 +1,25 @@
 package com.company.animal;
 
+import com.company.Mate;
 import com.company.TomadorDeMate;
 
 public class PezVolador extends Pez implements TomadorDeMate {
 
-  public PezVolador(Integer energia) {
-    super(energia);
+  public PezVolador(String nombre, Double energia) {
+    super(nombre, energia);
   }
 
   @Override
-  public void tomarMate() {
-    // TODO: 18/03/2020
+  public void tomarMate(Mate unMate) {
+    this.recibirMate();
+    this.devolverMate();
   }
 
   private void recibirMate(){
-    // TODO: 18/03/2020
+    System.out.println(this.nombre + " recibe el mate y lo toma.");
   }
 
   private void devolverMate(){
-    // TODO: 18/03/2020
+    System.out.println(this.nombre + " devuelve el mate vacío.");
   }
 }
